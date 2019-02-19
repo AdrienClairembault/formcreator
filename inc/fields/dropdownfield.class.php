@@ -464,7 +464,7 @@ class PluginFormcreatorDropdownField extends PluginFormcreatorField
             $groupTable => [
                'FKEY' => [
                   $groupTable => 'id',
-                  $groupUser => $groupFk,
+                  $groupUserTable => $groupFk,
                ],
             ],
          ],
