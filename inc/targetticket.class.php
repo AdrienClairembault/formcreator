@@ -243,7 +243,7 @@ class PluginFormcreatorTargetTicket extends PluginFormcreatorTargetBase
          'on_change' => 'updateCompositePeerType()',
          'rand'      => $rand,
       ]);
-      $script = <<<EOS
+      $script = <<<SCRIPT
       function updateCompositePeerType() {
          if ($('#dropdown__link_itemtype$rand').val() == 'Ticket') {
             $('#plugin_formcreator_link_ticket').show();
@@ -254,7 +254,7 @@ class PluginFormcreatorTargetTicket extends PluginFormcreatorTargetBase
          }
       }
       updateCompositePeerType();
-EOS;
+SCRIPT;
       echo Html::scriptBlock($script);
       // get already linked items
       $targetTicketId = $this->getID();
@@ -798,7 +798,9 @@ EOS;
          'on_change'             => 'change_associate()',
          'rand'                  => $rand
       ]);
-      $script = <<<JAVASCRIPT
+      $ruleAnswer = self::ASSOCIATE_RULE_ANSWER;
+      $ruleSpecific = self::ASSOCIATE_RULE_SPECIFIC;
+      $script = <<<SCRIPT
          function change_associate() {
             $('#associate_specific_title').hide();
             $('#associate_specific_value').hide();
@@ -806,18 +808,18 @@ EOS;
             $('#associate_question_value').hide();
 
             switch($('#dropdown_associate_rule$rand').val()) {
-               case self::ASSOCIATE_RULE_ANSWER :
+               case $ruleAnswer:
                   $('#associate_question_title').show();
                   $('#associate_question_value').show();
                   break;
-               case self::ASSOCIATE_RULE_SPECIFIC:
+               case $ruleSpecific:
                   $('#associate_specific_title').show();
                   $('#associate_specific_value').show();
                   break;
             }
          }
          change_associate();
-JAVASCRIPT;
+SCRIPT;
       echo Html::scriptBlock($script);
       echo '</td>';
       echo '<td width="15%">';
