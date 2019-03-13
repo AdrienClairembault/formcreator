@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-12 15:55+0100\n"
+"POT-Creation-Date: 2019-05-03 10:10+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,25 +24,24 @@ msgid_plural "Form categories"
 msgstr[0] ""
 msgstr[1] ""
 
-#: setup.php:59 setup.php:204 ajax/homepage_link.php:36
-#: inc/entityconfig.class.php:55 inc/form.class.php:92 inc/form.class.php:680
-#: inc/form.class.php:2542 inc/formanswer.class.php:173
-#: inc/formlist.class.php:46 js/scripts.js.php:72
-msgid "Form"
-msgid_plural "Forms"
-msgstr[0] ""
-msgstr[1] ""
-
 #: setup.php:194 inc/form.class.php:100 inc/formlist.class.php:54
 #: inc/formlist.class.php:55
 msgid "Forms waiting for validation"
 msgstr ""
 
+#: setup.php:204 ajax/homepage_link.php:36 inc/entityconfig.class.php:55
+#: inc/form.class.php:92 inc/form.class.php:680 inc/form.class.php:2555
+#: inc/formanswer.class.php:173 inc/formlist.class.php:46 js/scripts.js.php:72
+msgid "Form"
+msgid_plural "Forms"
+msgstr[0] ""
+msgstr[1] ""
+
 #: front/form.php:45 front/formanswer.form.php:81 front/formanswer.form.php:86
 #: front/formanswer.php:46 front/formanswer.php:51 front/issue.php:46
 #: front/issue.php:51 front/targetchange.form.php:74
-#: front/targetticket.form.php:74 inc/form.class.php:2662
-#: inc/form.class.php:2669
+#: front/targetticket.form.php:74 inc/form.class.php:2675
+#: inc/form.class.php:2682
 msgid "Form Creator"
 msgstr ""
 
@@ -50,11 +49,11 @@ msgstr ""
 #: front/issue.php:42 front/knowbaseitem.form.php:45
 #: front/reservation.form.php:46 front/reservation.php:46
 #: front/reservationitem.php:42 front/wizard.php:44 front/wizardfeeds.php:45
-#: inc/form.class.php:2657
+#: inc/form.class.php:2670
 msgid "Service catalog"
 msgstr ""
 
-#: front/formlist.php:46 front/formlist.php:52 inc/form.class.php:2659
+#: front/formlist.php:46 front/formlist.php:52 inc/form.class.php:2672
 msgid "Form list"
 msgstr ""
 
@@ -66,7 +65,7 @@ msgstr ""
 msgid "The question has been successfully updated!"
 msgstr ""
 
-#: inc/answer.class.php:66 inc/targetbase.class.php:1819
+#: inc/answer.class.php:66 inc/targetbase.class.php:1830
 msgid "Answer"
 msgid_plural "Answers"
 msgstr[0] ""
@@ -152,7 +151,7 @@ msgstr[1] ""
 msgid "Delete"
 msgstr ""
 
-#: inc/form.class.php:629 inc/form.class.php:2776
+#: inc/form.class.php:629 inc/form.class.php:2789
 msgid "Add a destination"
 msgstr ""
 
@@ -216,7 +215,7 @@ msgstr ""
 msgid "Choose a validator"
 msgstr ""
 
-#: inc/form.class.php:1362 inc/targetbase.class.php:1729
+#: inc/form.class.php:1362 inc/targetbase.class.php:1740
 #: inc/targetchange.class.php:370 inc/targetticket.class.php:362
 msgid "The name cannot be empty!"
 msgstr ""
@@ -234,87 +233,87 @@ msgstr ""
 msgid "Duplicate"
 msgstr ""
 
-#: inc/form.class.php:1928
+#: inc/form.class.php:1934
 #, php-format
 msgid "Form duplicated: %s"
 msgstr ""
 
-#: inc/form.class.php:1939
+#: inc/form.class.php:1945
 #, php-format
 msgid "Form Transfered: %s"
 msgstr ""
 
-#: inc/form.class.php:2112
+#: inc/form.class.php:2118
 msgid "Upload of JSON files not allowed."
 msgstr ""
 
-#: inc/form.class.php:2115
+#: inc/form.class.php:2121
 msgid "You may allow JSON files right now."
 msgstr ""
 
-#: inc/form.class.php:2116
+#: inc/form.class.php:2122
 msgctxt "button"
 msgid "Create"
 msgstr ""
 
-#: inc/form.class.php:2119 inc/form.class.php:2130
+#: inc/form.class.php:2125 inc/form.class.php:2136
 msgid "Please contact your GLPI administrator."
 msgstr ""
 
-#: inc/form.class.php:2120 inc/form.class.php:2131
+#: inc/form.class.php:2126 inc/form.class.php:2137
 msgctxt "button"
 msgid "Back"
 msgstr ""
 
-#: inc/form.class.php:2123
+#: inc/form.class.php:2129
 msgid "Upload of JSON files not enabled."
 msgstr ""
 
-#: inc/form.class.php:2126 inc/form.class.php:2129
+#: inc/form.class.php:2132 inc/form.class.php:2135
 msgid "You may enable JSON files right now."
 msgstr ""
 
-#: inc/form.class.php:2127
+#: inc/form.class.php:2133
 msgctxt "button"
 msgid "Enable"
 msgstr ""
 
-#: inc/form.class.php:2210
+#: inc/form.class.php:2216
 #, php-format
 msgid "Forms successfully imported from %s"
 msgstr ""
 
-#: inc/form.class.php:2213
+#: inc/form.class.php:2219
 #, php-format
 msgid "Failed to import forms from %s"
 msgstr ""
 
-#: inc/form.class.php:2340
+#: inc/form.class.php:2346
 #, php-format
 msgid "The form %1$s already exists and is in an unmodifiable entity."
 msgstr ""
 
-#: inc/form.class.php:2437
+#: inc/form.class.php:2450
 msgid "Failed to create JSON document type"
 msgstr ""
 
-#: inc/form.class.php:2444
+#: inc/form.class.php:2457
 msgid "JSON document type not found"
 msgstr ""
 
-#: inc/form.class.php:2451
+#: inc/form.class.php:2464
 msgid "Failed to update JSON document type"
 msgstr ""
 
-#: inc/form.class.php:2546
+#: inc/form.class.php:2559
 msgid "Forms without category"
 msgstr ""
 
-#: inc/form.class.php:2818 inc/form.class.php:2847
+#: inc/form.class.php:2831 inc/form.class.php:2860
 msgid "Unsuported target type."
 msgstr ""
 
-#: inc/form.class.php:2830
+#: inc/form.class.php:2843
 msgid "The form does not exists."
 msgstr ""
 
@@ -332,13 +331,13 @@ msgstr ""
 msgid "Please active the form to view the link"
 msgstr ""
 
-#: inc/formanswer.class.php:136 inc/issue.class.php:474
+#: inc/formanswer.class.php:136 inc/issue.class.php:473
 msgid "Form answer"
 msgid_plural "Form answers"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/formanswer.class.php:193 inc/issue.class.php:378
+#: inc/formanswer.class.php:193 inc/issue.class.php:377
 msgid "Form approver"
 msgstr ""
 
@@ -390,23 +389,23 @@ msgstr ""
 msgid "Refused comment is required!"
 msgstr ""
 
-#: inc/formanswer.class.php:814
+#: inc/formanswer.class.php:813
 msgid "Cannot generate targets!"
 msgstr ""
 
-#: inc/formanswer.class.php:943 inc/formanswer.class.php:1055
+#: inc/formanswer.class.php:942 inc/formanswer.class.php:1054
 msgid "The form has been successfully saved!"
 msgstr ""
 
-#: inc/formanswer.class.php:987 inc/formanswer.class.php:1014
+#: inc/formanswer.class.php:986 inc/formanswer.class.php:1013
 msgid "You are not the validator of these answers"
 msgstr ""
 
-#: inc/formanswer.class.php:1112 inc/formanswer.class.php:1114
+#: inc/formanswer.class.php:1111 inc/formanswer.class.php:1113
 msgid "Form data"
 msgstr ""
 
-#: inc/issue.class.php:40 inc/issue.class.php:285
+#: inc/issue.class.php:40 inc/issue.class.php:284
 msgid "Issue"
 msgid_plural "Issues"
 msgstr[0] ""
@@ -416,15 +415,15 @@ msgstr[1] ""
 msgid "Update issue data from tickets and form answers"
 msgstr ""
 
-#: inc/issue.class.php:397
+#: inc/issue.class.php:396
 msgid "Ticket approver"
 msgstr ""
 
-#: inc/issue.class.php:479
+#: inc/issue.class.php:478
 msgid "Not validated"
 msgstr ""
 
-#: inc/issue.class.php:480
+#: inc/issue.class.php:479
 msgid "Refused"
 msgstr ""
 
@@ -478,7 +477,7 @@ msgstr ""
 
 #: inc/question.class.php:72 inc/targetbase.class.php:833
 #: inc/targetbase.class.php:893 inc/targetbase.class.php:971
-#: inc/targetbase.class.php:1586 inc/targetbase.class.php:1817
+#: inc/targetbase.class.php:1586 inc/targetbase.class.php:1828
 #: inc/targetticket.class.php:806
 msgid "Question"
 msgid_plural "Questions"
@@ -532,7 +531,7 @@ msgid "Edit a question"
 msgstr ""
 
 #: inc/question.class.php:765 inc/section.class.php:66
-#: inc/targetbase.class.php:1820
+#: inc/targetbase.class.php:1831
 msgid "Section"
 msgid_plural "Sections"
 msgstr[0] ""
@@ -743,7 +742,15 @@ msgstr ""
 msgid "Location "
 msgstr ""
 
-#: inc/targetbase.class.php:1824
+#: inc/targetbase.class.php:1713
+msgid "A target must be associated to a form."
+msgstr ""
+
+#: inc/targetbase.class.php:1718
+msgid "A target must be associated to an existing form."
+msgstr ""
+
+#: inc/targetbase.class.php:1835
 msgid "Full form"
 msgstr ""
 
@@ -871,7 +878,7 @@ msgstr[1] ""
 
 #: inc/fields/actorfield.class.php:229 inc/fields/checkboxesfield.class.php:183
 #: inc/fields/datefield.class.php:83 inc/fields/datetimefield.class.php:86
-#: inc/fields/dropdownfield.class.php:335 inc/fields/emailfield.class.php:93
+#: inc/fields/dropdownfield.class.php:343 inc/fields/emailfield.class.php:93
 #: inc/fields/floatfield.class.php:123 inc/fields/glpiselectfield.class.php:132
 #: inc/fields/integerfield.class.php:124
 #: inc/fields/ldapselectfield.class.php:176
@@ -903,7 +910,7 @@ msgid "Checkboxes"
 msgstr ""
 
 #: inc/fields/checkboxesfield.class.php:223
-#: inc/fields/dropdownfield.class.php:349
+#: inc/fields/dropdownfield.class.php:357
 #: inc/fields/glpiselectfield.class.php:115
 #: inc/fields/multiselectfield.class.php:183
 #: inc/fields/radiosfield.class.php:130
@@ -952,7 +959,7 @@ msgstr ""
 msgid "ticket categories root"
 msgstr ""
 
-#: inc/fields/dropdownfield.class.php:361
+#: inc/fields/dropdownfield.class.php:369
 msgid "Invalid dropdown type:"
 msgstr ""
 
@@ -960,11 +967,15 @@ msgstr ""
 msgid "This is not a valid e-mail:"
 msgstr ""
 
-#: inc/fields/filefield.class.php:73 inc/fields/filefield.class.php:207
+#: inc/fields/filefield.class.php:72
+msgid "No attached document"
+msgstr ""
+
+#: inc/fields/filefield.class.php:74 inc/fields/filefield.class.php:210
 msgid "Attached document"
 msgstr ""
 
-#: inc/fields/filefield.class.php:97
+#: inc/fields/filefield.class.php:96
 msgid "A required file is missing:"
 msgstr ""
 
