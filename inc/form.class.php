@@ -757,7 +757,6 @@ PluginFormcreatorExportableInterface
       $table_cat     = getTableForItemType('PluginFormcreatorCategory');
       $table_form    = getTableForItemType('PluginFormcreatorForm');
       $table_fp      = getTableForItemType('PluginFormcreatorForm_Profile');
-      $table_target  = getTableForItemType('PluginFormcreatorTargets');
       $table_section = getTableForItemType('PluginFormcreatorSections');
       $table_question= getTableForItemType('PluginFormcreatorQuestions');
 
@@ -768,8 +767,8 @@ PluginFormcreatorExportableInterface
          'AND' => [
             "$table_form.is_active" => '1',
             "$table_form.is_deleted" => '0',
-            "$table_form.language" => [$_SESSION['glpilanguage'], '0', null],
-         ] + $dbUtils->getEntitiesRestrictCriteria($table_form, '', '', true, false),
+            "$table_form.language" => [$_SESSION['glpilanguage'], '0', '', null],
+         ] + $dbUtils->getEntitiesRestrictCriteria($table_form, '', '', true, false)
       ];
       if ($helpdeskHome) {
          $where_form['AND']["$table_form.helpdesk_home"] = '1';
@@ -778,7 +777,7 @@ PluginFormcreatorExportableInterface
       $selectedCategories = [];
       if ($rootCategory != 0) {
          $selectedCategories = getSonsOf($table_cat, $rootCategory);
-         $where_form['AND']["$table_form.plugin_formcreator_categories_id"] = [$selectedCategories];
+         $where_form['AND']["$table_form.plugin_formcreator_categories_id"] = $selectedCategories;
       }
 
       // Find forms accessible by the current user
@@ -806,13 +805,9 @@ PluginFormcreatorExportableInterface
       $where_form['AND'][] = [
          'OR' => [
             'access_rights' => ['!=', PluginFormcreatorForm::ACCESS_RESTRICTED],
-            "$table_form.id" => new QuerySubQuery([
-               'SELECT' => 'plugin_formcreator_forms_id',
-               'FROM' => $table_fp,
-               'WHERE' => [
-                  'profiles_id' => $_SESSION['glpiactiveprofile']['id']
-               ]
-            ])
+            [
+               "$table_fp.profiles_id" => $_SESSION['glpiactiveprofile']['id']
+            ]
          ]
       ];
 
@@ -828,12 +823,6 @@ PluginFormcreatorExportableInterface
                   $table_form => PluginFormcreatorCategory::getForeignKeyField(),
                ]
             ],
-            $table_target => [
-               'FKEY' => [
-                  $table_target => PluginFormcreatorForm::getForeignKeyField(),
-                  $table_form => 'id',
-               ]
-            ],
             $table_section => [
                'FKEY' => [
                   $table_section => PluginFormcreatorForm::getForeignKeyField(),
@@ -845,11 +834,16 @@ PluginFormcreatorExportableInterface
                   $table_question => PluginFormcreatorSection::getForeignKeyField(),
                   $table_section => 'id'
                ]
+            ],
+            $table_fp => [
+               'FKEY' => [
+                  $table_fp => PluginFormcreatorForm::getForeignKeyField(),
+                  $table_form => 'id',
+               ]
             ]
          ],
          'WHERE' => $where_form,
          'GROUPBY' => [
-            "$table_target.plugin_formcreator_forms_id",
             "$table_form.id",
             "$table_form.name",
             "$table_form.description",
@@ -863,7 +857,6 @@ PluginFormcreatorExportableInterface
 
       $formList = [];
       if ($result_forms->count() > 0) {
-         // while ($form = $DB->fetch_array($result_forms)) {
          foreach ($result_forms as $form) {
             $formList[] = [
                'id'           => $form['id'],
@@ -932,7 +925,8 @@ PluginFormcreatorExportableInterface
             'AND' => [
                "$table_form.is_active" => '1',
                "$table_form.is_deleted" => '0',
-               "$table_form.language" => [$_SESSION['glpilanguage'], '0', null],
+               "$table_form.language" => [$_SESSION['glpilanguage'], '0', '', null],
+               "$table_form.is_default" => ['<>', '0']
             ] + $dbUtils->getEntitiesRestrictCriteria($table_form, '', '', true, false),
          ];
          $where_form['AND'][] = [
