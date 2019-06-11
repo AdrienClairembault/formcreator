@@ -876,6 +876,7 @@ PluginFormcreatorExportableInterface
             'contains' => $keywords
       ]) . ') AS `faqs`');
       $query_faqs = [
+         'SELECT' => ['faqs' => '*'],
          'FROM' => $query_faqs,
       ];
       if (count($selectedCategories) > 0) {
